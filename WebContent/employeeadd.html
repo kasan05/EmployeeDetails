@@ -1,0 +1,56 @@
+<div ng-show="successsubmit"><span class="label label-success">Employee addedd successfully</span></div>
+<form name="form" ng-submit="addEmployee()" novalidate>
+
+	<!-- Employee Name-->
+	<div class="form-group"
+		ng-class="{'has-error':form.name.$invalid && !form.name.$pristine}">
+		<label for="name">Employee Name:</label> <input type="text"
+			class="form-control" name="name" id="name" ng-model="name" required>
+		<p ng-show="form.name.$invalid && !form.name.$pristine"
+			class="help-block">Employee name is required</p>
+	</div>
+
+
+	<!--Employee Salary -->
+	<div class="form-group"
+		ng-class="{'has-error': form.salary.$invalid && !form.salary.$pristine}">
+		<label for="salary">Salary:</label> <input type="number"
+			class="form-control" name="salary" ng-model="salary" required>
+		<p ng-show="form.salary.$invalid && !form.salary.$pristine"
+			class="help-block">Employee Salary is required</p>
+	</div>
+
+	<!-- Department Name -->
+	<div class="form-group"
+		ng-class="{'has-error':form.depName.$invalid && !form.depName.$pristine}">
+		<label for="depName">DepartmentName:</label> <input type="text"
+			class="form-control" name="depName" ng-model="depName" required>
+		<p ng-show="form.depName.$invalid && !form.depName.$pristine"
+			class="help-block">Employee DepartmentName is required</p>
+	</div>
+
+	<!-- Manager ID -->
+	<div class="form-group"
+		ng-class="{'has-error':form.managerId.$invalid && !form.managerId.$pristine}">
+		<label for="managerId">ManagerId:</label> <input type="number"
+			class="form-control" name="managerId" ng-model="managerId" required>
+		<p ng-show="form.managerId.$invalid && !form.managerId.$pristine"
+			class="help-block">Employee ManagerId is required</p>
+	</div>
+
+
+	<!-- Manager Name -->
+	<div class="form-group"
+		ng-class="{'has-error':form.managerName.$invalid && !form.managerName.$pristine}">
+		<label for="managerName">ManagerName:</label> <input type="text"
+			class="form-control" name="managerName" ng-model="managerName"
+			required>
+		<p ng-show="form.managerName.$invalid && !form.managerName.$pristine"
+			class="help-block">Employee ManagerName is required"></p>
+	</div>
+
+	<!-- Submit Button -->
+	<button type="submit" class="btn btn-default"
+		ng-disabled="form.$invalid">Submit</button>
+
+</form>

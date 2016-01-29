@@ -1,0 +1,45 @@
+<div class="container">
+	<span style="float:right"><label><i class="fa fa-search">Search</i></label><input type="text"
+		ng-model="searchText"></span>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Employee Name</th>
+				<th>Salary</th>
+				<th>Department</th>
+				<th>Manager</th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat=" e in employees | filter:searchText">
+				<td ng-hide="e.edit">{{e.name}}</td>
+				<td ng-show="e.edit"><input type="text" ng-model="e.name"></td>
+
+				<td ng-hide="e.edit">{{e.salary}}</td>
+				<td ng-show="e.edit"><input type="text" ng-model="e.salary"></td>
+
+				<td ng-hide="e.edit">{{e.departmentName}}</td>
+				<td ng-show="e.edit"><input type="text"
+					ng-model="e.departmentName"></td>
+
+				<td>{{e.manager.name}}</td>
+
+
+				<td><button class="button btn-warning" ng-click="edit(e)">
+						<i class="fa fa-pencil-square-o">Edit</i>
+					</button></td>
+
+				<td><button class="button btn-info" ng-click="save(e)">
+						<i class="fa fa-floppy-o">Save</i>
+					</button></td>
+
+				<td><button class="btn btn-danger" ng-click="remove(e)">
+						<i class="fa fa-times">Delete</i>
+					</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
