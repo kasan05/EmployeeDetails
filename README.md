@@ -1,10 +1,11 @@
-# EmployeeDetails
+# EmployeeDetails<br/>
 
-this is a sample emploees management system
+this is a sample emploees management system<br/>
 
-technologies used
+technologies used<br/>
 
-frontend angularjs , bootstrap
-backend resteasy for creating webservice
-database mysql
-server wildfly
+frontend angularjs , bootstrap<br/>
+backend resteasy for creating webservice<br/>
+jpa with hibernate as persistance provider <br/>
+database mysql<br/>
+server wildfly<br/>
